@@ -15,7 +15,7 @@ function addItem (){
     var input=document.getElementById('inputTask');
     var itemText=input.value
     ul=document.getElementById('list')
-    var textNode=document.createTextNode('\t'+itemText)
+    var textNode=document.createTextNode(itemText)
 
     if(itemText==''){
         
@@ -36,8 +36,8 @@ function addItem (){
         checkBox.setAttribute('id','check');
 
         var label=document.createElement('label');
-
-        ul.appendChild(label)
+        
+        label.className='taskLabel'
         li.appendChild(checkBox);
         li.appendChild(label);
         label.appendChild(textNode);
@@ -47,7 +47,7 @@ function addItem (){
             li.className='visual';
         }, 200);
 
-
+        input.value=''
 
 
     }
